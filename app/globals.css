@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+	--background: #fbfbfa;
+	--foreground: #171717;
+	--muted: #737373;
+	--accent: #464feb;
+	--border: #e5e5e5;
+	--ink: #111111;
+	--paper: #fbfbfa;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-feature-settings: "kern" 1, "liga" 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.site-shell {
+	min-height: 100vh;
+	background-color: var(--background);
+	background-image: radial-gradient(#cfcfcf 0.9px, transparent 0.9px);
+	background-position: 0 0;
+	background-size: 18px 18px;
+}
+
+.brutalist-panel {
+	box-shadow: 6px 6px 0 var(--ink);
+}
+
+.brutalist-button {
+	box-shadow: 4px 4px 0 var(--ink);
+}
+
+.brutalist-button:hover {
+	box-shadow: 2px 2px 0 var(--ink);
+	transform: translate(2px, 2px);
+}
+
+.site-content {
+	background: rgba(251, 251, 250, 0.94);
+}
+
+html.dark body {
+	background: #111111;
+	color: #f5f5f5;
+}
+
+html.dark .site-shell {
+	background-color: #111111;
+	background-image: radial-gradient(#3a3a3a 0.9px, transparent 0.9px);
+}
+
+html.dark nav {
+	background: #111111 !important;
+	color: #f5f5f5;
+}
+
+html.dark nav button { color: #f5f5f5; }
+
+html.dark [class~="bg-white"],
+html.dark [class~="bg-white/80"] {
+	background-color: #1f1f1f;
+}
+
+html.dark [class~="text-neutral-950"] {
+	color: #f5f5f5;
+}
+
+html.dark [class~="text-neutral-700"] {
+	color: #d4d4d4;
+}
+
+html.dark [class~="text-neutral-500"] {
+	color: #a3a3a3;
+}
+
+html.dark [class~="text-neutral-400"] {
+	color: #737373;
+}
+
+html.dark .brutalist-button,
+html.dark .brutalist-panel {
+	box-shadow: 4px 4px 0 #464feb;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	font: inherit;
+}
+
+::selection {
+	background: #dfe1ff;
+	color: #171717;
+}
+
+.section-kicker {
+	color: var(--accent);
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.nav-link {
+	position: relative;
+}
+
+.nav-link::before {
+	position: absolute;
+	bottom: -0.35rem;
+	left: 0;
+	height: 2px;
+	width: 0;
+	background: var(--accent);
+	content: "";
+	transition: width 180ms ease;
+}
+
+.nav-link:hover::before,
+.nav-link:focus-visible::before {
+	width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.nav-link::before {
+		bottom: auto;
+		left: -0.9rem;
+		top: 50%;
+		width: 0;
+		height: 0.45rem;
+		transform: translateY(-50%);
+	}
+
+	.nav-link:hover::before,
+	.nav-link:focus-visible::before {
+		width: 0.45rem;
+	}
+}
+
+.flip-card {
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	transition: transform 500ms ease;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-visible .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+	transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.flip-card-inner {
+		transition: none;
+	}
+}

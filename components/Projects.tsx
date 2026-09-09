@@ -1,0 +1,72 @@
+import Image from "next/image";
+
+const screenshots = [
+	{ src: "/capstone/capstone-homepage.png", label: "SMFP services homepage", detail: "Introduces the service platform and gives customers a direct path to support." },
+	{ src: "/capstone/capstone-cxdashboard.png", label: "Customer dashboard", detail: "Centralizes customer requests, activity, and service status in one view." },
+	{ src: "/capstone/capstone-bookingservice.png", label: "Service booking flow", detail: "Guides customers through selecting and submitting a repair service request." },
+	{ src: "/capstone/capstone-bookinghistory.png", label: "Booking history", detail: "Makes previous and active repair bookings easier to review." },
+	{ src: "/capstone/capstone-transactionhistory.png", label: "Transaction history", detail: "Keeps a visible record of service-related transactions and activity." },
+	{ src: "/capstone/capstone-salesreport.png", label: "Sales report", detail: "Gives administrators a clearer view of sales and service performance." },
+];
+
+export default function Projects() {
+	return (
+		<section id="projects" className="py-16 sm:py-20 lg:ml-60">
+			<div className="mx-auto max-w-6xl px-6">
+				<p className="section-kicker">03 / Featured project</p>
+				<div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+					<div>
+						<p className="mb-3 text-sm text-[#464feb]">Capstone project / SMFP service platform</p>
+						<h2 className="max-w-3xl text-3xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-4xl lg:text-5xl">SmartLink</h2>
+					</div>
+					<p className="max-w-md text-left text-lg leading-8 text-neutral-500 sm:text-justify">
+						A unified platform for IT services and customer support, built to help SMFP move beyond Facebook with structured inquiries, repair tracking, and clearer service workflows.
+					</p>
+				</div>
+				<div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+					{["Customer inquiry portal", "Automated ticketing", "Repair job tracking", "Technician assignment"].map((feature, index) => (
+						<div className="p-0" key={feature}>
+							<span className="text-xs text-neutral-400">0{index + 1}</span>
+							<h3 className="mt-10 text-lg font-medium">{feature}</h3>
+						</div>
+					))}
+				</div>
+				<div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-500">
+					<span>Frontend development</span><span>UI development</span><span>Team collaboration</span><span>Testing</span><span>SDLC documentation</span>
+				</div>
+				<div className="mt-12 grid gap-8 pt-8 lg:grid-cols-[0.8fr_1.2fr]">
+					<div>
+						<p className="section-kicker">Case study</p>
+						<h3 className="mt-4 text-2xl font-black uppercase tracking-[-0.05em]">From manual repair requests to a structured service workflow.</h3>
+						<p className="mt-5 text-left leading-7 text-neutral-500 sm:text-justify">As project leader, I helped define what the system needed to do, researched the existing repair process, shaped the capstone structure step by step, maintained the database, and supported the team in keeping the codebase clean and consistent.</p>
+						<div className="mt-7 grid gap-5 text-sm sm:grid-cols-2">
+							<div><p className="section-kicker">Stack</p><p className="mt-2 text-neutral-700">HTML · CSS · Tailwind CSS · JavaScript · PHP · MySQL · Git</p></div>
+							<div><p className="section-kicker">Tools</p><p className="mt-2 text-neutral-700">VS Code · MySQL Server · Postman · Figma</p></div>
+							<div><p className="section-kicker">Methods</p><p className="mt-2 text-neutral-700">DFDs · ERDs · RESTful APIs · responsive testing</p></div>
+							<div><p className="section-kicker">Quality</p><p className="mt-2 text-neutral-700">ISO 25010: functionality, reliability, usability, efficiency, maintainability, portability</p></div>
+						</div>
+					</div>
+					<div className="grid gap-3 sm:grid-cols-2">
+						{screenshots.map((screenshot, index) => (
+							<figure key={screenshot.src}>
+								<div className="flip-card aspect-video" tabIndex={0} aria-label={`${screenshot.label}: focus or hover to view details`}>
+									<div className="flip-card-inner">
+										<div className="flip-card-front absolute inset-0 bg-neutral-900">
+											<Image src={screenshot.src} alt={screenshot.label} fill sizes="(min-width: 1024px) 35vw, 90vw" className="object-cover object-top" />
+										</div>
+										<div className="flip-card-back absolute inset-0 flex flex-col justify-between bg-[#464feb] p-5 text-white">
+											<span className="font-mono text-xs font-bold uppercase tracking-[0.12em]">0{index + 1} / SmartLink</span>
+											<p className="text-lg font-bold leading-6">{screenshot.detail}</p>
+											<span className="font-mono text-[0.65rem] uppercase tracking-[0.12em]">Hover or focus to return</span>
+										</div>
+									</div>
+								</div>
+								<figcaption className="pb-1 pt-3 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-neutral-500">0{index + 1} / {screenshot.label}</figcaption>
+							</figure>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+}

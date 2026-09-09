@@ -1,0 +1,20 @@
+export default function About() {
+	return (
+		<section id="about" className="py-16 sm:py-20 lg:ml-60">
+			<div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10">
+				<div>
+					<p className="section-kicker">01 / About</p>
+					<h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.06em] sm:text-4xl">A curious builder with a practical mindset.</h2>
+				</div>
+					<div className="max-w-2xl text-left text-lg leading-8 text-neutral-500 sm:text-justify">
+					<p>
+						I am an Information Technology professional passionate about software development, enterprise applications, and solving business problems through technology.
+					</p>
+					<p className="mt-6">
+						Currently working as a Packaged Application Development Associate, I continue to grow through hands-on projects and professional training in software engineering, cloud services, and modern web technologies.
+					</p>
+				</div>
+			</div>
+		</section>
+	);
+}
