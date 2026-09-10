@@ -10,7 +10,7 @@ export default function Skills() {
 			<div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10">
 				<div>
 					<p className="section-kicker">02 / Skills</p>
-					<h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Tools I use to turn ideas into outcomes.</h2>
+					<h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Tools I use to turn ideas into outcomes</h2>
 				</div>
 				<div className="grid content-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{skillGroups.map((group) => (
