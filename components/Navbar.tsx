@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = ["About", "Skills", "Projects", "Experience", "Certifications"];
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const menuButtonRef = useRef<HTMLButtonElement>(null);
+	const wasMenuOpen = useRef(false);
 	const [isDarkMode, setIsDarkMode] = useState(() => {
 		if (typeof window === "undefined") return false;
 		const savedTheme = window.localStorage.getItem("portfolio-theme");
@@ -15,6 +17,27 @@ export default function Navbar() {
 	useEffect(() => {
 		document.documentElement.classList.toggle("dark", isDarkMode);
 	}, [isDarkMode]);
+
+	useEffect(() => {
+		if (!isMenuOpen) return;
+
+		const closeOnEscape = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setIsMenuOpen(false);
+		};
+
+		document.body.classList.add("mobile-menu-open");
+		document.addEventListener("keydown", closeOnEscape);
+
+		return () => {
+			document.body.classList.remove("mobile-menu-open");
+			document.removeEventListener("keydown", closeOnEscape);
+		};
+	}, [isMenuOpen]);
+
+	useEffect(() => {
+		if (wasMenuOpen.current && !isMenuOpen) menuButtonRef.current?.focus();
+		wasMenuOpen.current = isMenuOpen;
+	}, [isMenuOpen]);
 
 	function toggleTheme() {
 		const nextThemeIsDark = !isDarkMode;
@@ -30,16 +53,18 @@ export default function Navbar() {
 					Jay Buhanghang<span className="text-[#464feb]">.</span>
 				</a>
 				<button
+					ref={menuButtonRef}
+					aria-controls="mobile-navigation"
 					aria-expanded={isMenuOpen}
 					aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-					className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 border-2 border-black text-neutral-700 sm:hidden lg:hidden"
+					className="menu-toggle flex h-10 w-10 flex-col items-center justify-center gap-1.5 border-2 border-black text-neutral-700 sm:hidden lg:hidden"
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
 					type="button"
 				>
-					<span className="h-px w-4 bg-current" />
-					<span className="h-px w-4 bg-current" />
+					<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
+					<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
 				</button>
-				<div className={`${isMenuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full flex-col gap-1 bg-[#fbfbfa] px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:static sm:flex sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3 sm:bg-transparent sm:p-0 lg:mt-20 lg:flex lg:flex-col lg:flex-nowrap lg:gap-5 lg:px-0 lg:py-0`}>
+				<div className="hidden flex-col gap-1 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3 lg:mt-20 lg:flex lg:flex-col lg:flex-nowrap lg:gap-5">
 					{links.map((link) => (
 						<a className="nav-link whitespace-nowrap py-2 transition-colors hover:text-[#464feb] sm:py-0" href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
 							{link}
@@ -56,6 +81,27 @@ export default function Navbar() {
 					</a>
 				</div>
 			</div>
+			{isMenuOpen && (
+				<div aria-label="Mobile navigation" aria-modal="true" className="mobile-menu sm:hidden" id="mobile-navigation" role="dialog">
+					<div className="mobile-menu-header">
+						<span className="section-kicker">Navigation</span>
+						<span aria-hidden="true" className="mobile-menu-index">00 / 05</span>
+					</div>
+					<div className="mobile-menu-links">
+						{links.map((link, index) => (
+							<a href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
+								<span aria-hidden="true" className="mobile-menu-number">0{index + 1}</span>
+								<span>{link}</span>
+							</a>
+						))}
+					</div>
+					<div className="mobile-menu-footer">
+						<span className="section-kicker">Available for opportunities</span>
+						<a href="mailto:buhanghangjay@gmail.com">buhanghangjay@gmail.com</a>
+						<span>Manila, Philippines</span>
+					</div>
+				</div>
+			)}
 		</nav>
 	);
 }
