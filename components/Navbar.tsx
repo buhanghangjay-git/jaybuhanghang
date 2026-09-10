@@ -52,25 +52,36 @@ export default function Navbar() {
 				<a href="#top" className="shrink-0 text-base font-black uppercase tracking-[-0.06em] sm:text-lg">
 					Jay Buhanghang<span className="text-[#464feb]">.</span>
 				</a>
-				<button
-					ref={menuButtonRef}
-					aria-controls="mobile-navigation"
-					aria-expanded={isMenuOpen}
-					aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-					className="menu-toggle flex h-10 w-10 flex-col items-center justify-center gap-1.5 border-2 border-black text-neutral-700 sm:hidden lg:hidden"
-					onClick={() => setIsMenuOpen(!isMenuOpen)}
-					type="button"
-				>
-					<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
-					<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
-				</button>
+				<div className="mobile-actions sm:hidden lg:hidden">
+					<button
+						aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+						aria-pressed={isDarkMode}
+						className="theme-toggle"
+						onClick={toggleTheme}
+						type="button"
+					>
+						<span aria-hidden="true">{isDarkMode ? "☀" : "☾"}</span>
+					</button>
+					<button
+						ref={menuButtonRef}
+						aria-controls="mobile-navigation"
+						aria-expanded={isMenuOpen}
+						aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+						className="menu-toggle"
+						onClick={() => setIsMenuOpen(!isMenuOpen)}
+						type="button"
+					>
+						<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
+						<span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
+					</button>
+				</div>
 				<div className="hidden flex-col gap-1 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3 lg:mt-20 lg:flex lg:flex-col lg:flex-nowrap lg:gap-5">
 					{links.map((link) => (
 						<a className="nav-link whitespace-nowrap py-2 transition-colors hover:text-[#464feb] sm:py-0" href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
 							{link}
 						</a>
 					))}
-					<button className="mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 lg:mt-8" onClick={toggleTheme} type="button" aria-label="Toggle color theme">
+					<button aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"} aria-pressed={isDarkMode} className="mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 lg:mt-8" onClick={toggleTheme} type="button">
 						<span aria-hidden="true">{isDarkMode ? "☀" : "☾"}</span>
 						{isDarkMode ? "Light mode" : "Dark mode"}
 					</button>
@@ -83,15 +94,10 @@ export default function Navbar() {
 			</div>
 			{isMenuOpen && (
 				<div aria-label="Mobile navigation" aria-modal="true" className="mobile-menu sm:hidden" id="mobile-navigation" role="dialog">
-					<div className="mobile-menu-header">
-						<span className="section-kicker">Navigation</span>
-						<span aria-hidden="true" className="mobile-menu-index">00 / 05</span>
-					</div>
 					<div className="mobile-menu-links">
-						{links.map((link, index) => (
+						{links.map((link) => (
 							<a href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
-								<span aria-hidden="true" className="mobile-menu-number">0{index + 1}</span>
-								<span>{link}</span>
+								{link}
 							</a>
 						))}
 					</div>
