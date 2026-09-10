@@ -48,7 +48,7 @@ export default function Navbar() {
 
 	return (
 		<nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
-			<div className="mx-auto flex w-full max-w-none items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
+			<div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
 				<a href="#top" className="shrink-0 text-base font-black uppercase tracking-[-0.06em] sm:text-lg">
 					Jay Buhanghang<span className="text-[#464feb]">.</span>
 				</a>
