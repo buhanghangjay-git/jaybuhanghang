@@ -20,7 +20,7 @@ export default function Hero() {
 				<div className="order-1 lg:order-2">
 					<div className="mx-auto flex aspect-square w-[65%] max-w-[260px] items-end justify-center overflow-hidden bg-white sm:max-w-[300px] lg:max-w-[340px]"><Image src="/jay-portfolio.png" alt="Jay Buhanghang wearing a black blazer" width={837} height={839} className="h-full w-full object-cover object-top" /></div>
 					<p className="mt-6 pl-0 text-sm leading-7 text-neutral-500">Based in the Philippines<br />Open to meaningful opportunities</p>
-					<div className="mt-10 pt-5 font-mono text-xs uppercase tracking-[0.18em] text-neutral-400">Scroll to discover</div>
+					<div className="mt-10 pt-5 font-mono text-xs uppercase tracking-[0.18em] text-neutral-400"></div>
 				</div>
 			</div>
 		</section>
