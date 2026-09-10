@@ -81,11 +81,10 @@ export default function Navbar() {
 							{link}
 						</a>
 					))}
-					<button aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"} aria-pressed={isDarkMode} className="mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 lg:mt-8" onClick={toggleTheme} type="button">
-						<span aria-hidden="true">{isDarkMode ? "☀" : "☾"}</span>
+					<button aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"} aria-pressed={isDarkMode} className="desktop-theme-toggle mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 lg:mt-8" onClick={toggleTheme} type="button">
 						{isDarkMode ? "Light mode" : "Dark mode"}
 					</button>
-					<a className="mt-4 max-w-full border-t border-neutral-300 pt-5 text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb] lg:absolute lg:bottom-8 lg:left-8 lg:right-8 lg:mt-0" href="mailto:buhanghangjay@gmail.com">
+					<a className="mt-4 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb] lg:absolute lg:bottom-8 lg:left-8 lg:right-8 lg:mt-0" href="mailto:buhanghangjay@gmail.com">
 						<span className="block max-w-[12rem] text-sm leading-6">Open to Software Engineering and Application Development opportunities.</span>
 						<span className="mt-4 block break-all font-bold text-neutral-800">buhanghangjay@gmail.com</span>
 						<span className="mt-2 block text-neutral-500">Manila, Philippines</span>
