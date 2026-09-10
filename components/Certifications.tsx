@@ -14,7 +14,7 @@ const certifications = [
 export default function Certifications() {
 	return (
 		<section id="certifications" className="py-16 sm:py-20 lg:ml-60">
-			<div className="mx-auto max-w-6xl px-6">
+			<div className="mx-auto max-w-6xl px-4 sm:px-6">
 				<p className="section-kicker">05 / Certifications</p>
 				<div className="mt-8 grid gap-10 sm:grid-cols-2">
 					{certifications.map((certification, index) => (

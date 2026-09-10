@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
 	return (
 		<section id="top" className="relative overflow-hidden lg:ml-60">
-			<div className="mx-auto grid min-h-[680px] max-w-6xl items-end gap-12 px-6 pb-14 pt-28 sm:min-h-[760px] sm:gap-16 sm:pb-20 sm:pt-36 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-16 lg:pb-24">
+			<div className="mx-auto grid min-h-[680px] max-w-6xl items-end gap-12 px-4 pb-14 pt-28 sm:min-h-[760px] sm:gap-16 sm:px-6 sm:pb-20 sm:pt-36 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-16 lg:pb-24">
 				<div className="order-2 lg:order-1">
 					<h1 className="max-w-3xl text-3xl font-black uppercase leading-[0.9] tracking-[-0.08em] text-neutral-950 sm:text-4xl lg:text-[clamp(2.5rem,3vw,3.5rem)]">Jay Buhanghang</h1>
 					<p className="mt-6 max-w-xl text-left text-lg leading-8 text-neutral-500 sm:mt-8 sm:text-justify">I&apos;m a Software Engineer and Packaged Application Development Associate focused on practical software solutions, modern web technologies, and enterprise applications.</p>

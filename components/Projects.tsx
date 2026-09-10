@@ -12,7 +12,7 @@ const screenshots = [
 export default function Projects() {
 	return (
 		<section id="projects" className="py-16 sm:py-20 lg:ml-60">
-			<div className="mx-auto max-w-6xl px-6">
+			<div className="mx-auto max-w-6xl px-4 sm:px-6">
 				<p className="section-kicker">03 / Featured project</p>
 				<div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
 					<div>

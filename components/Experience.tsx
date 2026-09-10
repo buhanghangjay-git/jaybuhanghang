@@ -46,7 +46,7 @@ export default function Experience() {
 
 	return (
 		<section id="experience" className="py-16 sm:py-20 lg:ml-60">
-			<div className="mx-auto max-w-6xl px-6">
+			<div className="mx-auto max-w-6xl px-4 sm:px-6">
 				<p className="section-kicker">04 / Experience</p>
 				<div className="relative mt-8 py-2">
 					{visibleExperiences.map((experience, index) => (

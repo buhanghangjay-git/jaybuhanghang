@@ -24,9 +24,9 @@ export default function Navbar() {
 	}
 
 	return (
-		<nav className="fixed inset-x-0 top-0 z-50 bg-[#fbfbfa] lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
-			<div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 lg:block lg:px-8 lg:py-9">
-				<a href="#top" className="shrink-0 text-lg font-black uppercase tracking-[-0.06em]">
+		<nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
+			<div className="mx-auto flex w-full max-w-none items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
+				<a href="#top" className="shrink-0 text-base font-black uppercase tracking-[-0.06em] sm:text-lg">
 					Jay Buhanghang<span className="text-[#464feb]">.</span>
 				</a>
 				<button
@@ -39,9 +39,9 @@ export default function Navbar() {
 					<span className="h-px w-4 bg-current" />
 					<span className="h-px w-4 bg-current" />
 				</button>
-				<div className={`${isMenuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full flex-col bg-[#fbfbfa] px-6 py-5 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:static sm:flex sm:flex-row sm:bg-transparent sm:p-0 lg:mt-20 lg:flex lg:flex-col lg:gap-5 lg:px-0 lg:py-0`}>
+				<div className={`${isMenuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full flex-col gap-1 bg-[#fbfbfa] px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:static sm:flex sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3 sm:bg-transparent sm:p-0 lg:mt-20 lg:flex lg:flex-col lg:flex-nowrap lg:gap-5 lg:px-0 lg:py-0`}>
 					{links.map((link) => (
-						<a className="nav-link whitespace-nowrap py-3 transition-colors hover:text-[#464feb] sm:py-0" href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
+						<a className="nav-link whitespace-nowrap py-2 transition-colors hover:text-[#464feb] sm:py-0" href={`#${link.toLowerCase()}`} key={link} onClick={() => setIsMenuOpen(false)}>
 							{link}
 						</a>
 					))}
