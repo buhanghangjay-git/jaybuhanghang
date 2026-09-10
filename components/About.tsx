@@ -8,10 +8,10 @@ export default function About() {
 				</div>
 					<div className="max-w-2xl text-left text-lg leading-8 text-neutral-500 sm:text-justify">
 					<p>
-						I am an Information Technology professional passionate about software development, enterprise applications, and solving business problems through technology.
+						Technology, for me, is a tool for solving problems and creating meaningful experiences.
 					</p>
 					<p className="mt-6">
-						Currently working as a Packaged Application Development Associate, I continue to grow through hands-on projects and professional training in software engineering, cloud services, and modern web technologies.
+						As a Software Engineer and Packaged Application Development Associate, I focus on building practical applications, improving business processes, and growing through real-world projects, modern technologies, and continuous learning.
 					</p>
 				</div>
 			</div>
