@@ -105,7 +105,7 @@ export default function Navbar() {
                         href="mailto:buhanghangjay@gmail.com"
                     >
                         <span className="block max-w-[12rem] text-sm leading-6">
-                            Open to Software Engineering and Application Development opportunities.
+                            Lets work together, reach me at
                         </span>
                         <span className="mt-4 block break-all font-bold text-neutral-800">
                             buhanghangjay@gmail.com

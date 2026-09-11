@@ -13,18 +13,17 @@ export default function Projects() {
 	return (
 		<section id="projects" className="py-16 sm:py-20 lg:ml-60">
 			<div className="mx-auto max-w-6xl px-4 sm:px-6">
-				<p className="section-kicker">03 / Featured project</p>
+				<p className="section-kicker">03 / Featured Work</p>
 				<div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
 					<div>
-						<p className="mb-3 text-sm text-[#464feb]">Capstone project / SMFP service platform</p>
+						<p className="mb-3 text-sm text-[#464feb]">Academic Case Study / Service Management Platform</p>
 						<h2 className="max-w-3xl text-3xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-4xl lg:text-5xl">SmartLink</h2>
 					</div>
 					<p className="max-w-md text-left text-lg leading-8 text-neutral-500 sm:text-justify">
-						A unified platform for IT services and customer support, built to help SMFP move beyond Facebook with structured inquiries, repair tracking, and clearer service workflows.
-					</p>
+							A centralized service management platform designed to streamline repair requests, improve communication, and digitize service operations through a structured workflow.					</p>
 				</div>
 				<div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-					{["Customer inquiry portal", "Automated ticketing", "Repair job tracking", "Technician assignment"].map((feature, index) => (
+					{[" Centralized Request Management", "Structured Service Workflow", "Real-Time Repair Tracking", "Technician Coordination"].map((feature, index) => (
 						<div className="p-0" key={feature}>
 							<span className="text-xs text-neutral-400">0{index + 1}</span>
 							<h3 className="mt-10 text-lg font-medium">{feature}</h3>
@@ -32,18 +31,20 @@ export default function Projects() {
 					))}
 				</div>
 				<div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-500">
-					<span>Frontend development</span><span>UI development</span><span>Team collaboration</span><span>Testing</span><span>SDLC documentation</span>
+					<span>Project Leadership</span><span>System Design</span><span>Frontend Development</span><span>Database Management</span><span>Testing & Validation</span>
 				</div>
 				<div className="mt-12 grid gap-8 pt-8 lg:grid-cols-[0.8fr_1.2fr]">
 					<div>
 						<p className="section-kicker">Case study</p>
-						<h3 className="mt-4 text-2xl font-black uppercase tracking-[-0.05em]">From manual repair requests to a structured service workflow.</h3>
-						<p className="mt-5 text-left leading-7 text-neutral-500 sm:text-justify">As project leader, I helped define what the system needed to do, researched the existing repair process, shaped the capstone structure step by step, maintained the database, and supported the team in keeping the codebase clean and consistent.</p>
+						<h3 className="mt-4 text-2xl font-black uppercase tracking-[-0.05em]">Digitizing Service Operations Through a Centralized Platform</h3>
+						<p className="mt-5 text-left leading-7 text-neutral-500 sm:text-justify">As Project Leader, I collaborated with the team to analyze existing service workflows, define system requirements, design the database structure, and support application development activities throughout the project lifecycle.
+
+The platform was created to address fragmented communication and manual request handling by introducing a centralized workflow for customers, technicians, and administrators.</p>
 						<div className="mt-7 grid gap-5 text-sm sm:grid-cols-2">
 							<div><p className="section-kicker">Stack</p><p className="mt-2 text-neutral-700">HTML · CSS · Tailwind CSS · JavaScript · PHP · MySQL · Git</p></div>
-							<div><p className="section-kicker">Tools</p><p className="mt-2 text-neutral-700">VS Code · MySQL Server · Postman · Figma</p></div>
-							<div><p className="section-kicker">Methods</p><p className="mt-2 text-neutral-700">DFDs · ERDs · RESTful APIs · responsive testing</p></div>
-							<div><p className="section-kicker">Quality</p><p className="mt-2 text-neutral-700">ISO 25010: functionality, reliability, usability, efficiency, maintainability, portability</p></div>
+							<div><p className="section-kicker">Development Tools</p><p className="mt-2 text-neutral-700">VS Code · MySQL Server · Postman · Figma</p></div>
+							<div><p className="section-kicker">Technical Concepts</p><p className="mt-2 text-neutral-700">DFDs · ERDs · RESTful APIs · responsive testing</p></div>
+							<div><p className="section-kicker">Quality Standards</p><p className="mt-2 text-neutral-700">ISO 25010: functionality, reliability, usability, efficiency, maintainability, portability</p></div>
 						</div>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-2">
