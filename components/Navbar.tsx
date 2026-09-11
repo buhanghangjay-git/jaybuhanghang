@@ -50,7 +50,7 @@ export default function Navbar() {
         <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] 2xl:bottom-0 2xl:left-0 2xl:right-auto 2xl:top-0 2xl:w-60">
             <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
                 <a href="#top" className="text-lg font-black uppercase tracking-tight text-neutral-900 dark:text-white">
-                    Jay Buhanghang<span className="text-[#464feb]">.</span>
+                    Jay Buhanghang<span className="text-[#464feb]"></span>
                 </a>
 
                 <div className="mobile-actions">
