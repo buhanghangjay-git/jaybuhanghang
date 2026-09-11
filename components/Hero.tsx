@@ -7,14 +7,17 @@ export default function Hero() {
 				
 				{/* Left Column */}
 				<div className="order-2 lg:order-1">
-					<h1 className="max-w-3xl text-3xl font-black uppercase leading-[0.9] tracking-[-0.08em] text-neutral-950 sm:text-4xl lg:text-[clamp(2.5rem,3vw,3.5rem)]">
-						Jay Buhanghang
-					</h1>
-					
-					{/* Improved Paragraph: Left-aligned, updated copy, comfortable line height */}
-					<p className="mt-6 max-w-xl text-left text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg">
-						Software Engineer and Packaged Application Development Associate building modern web applications and enterprise solutions.
-					</p>
+					<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#464feb]">
+							Software Engineer • Application Development
+						</span>
+
+						<h1 className="mt-4 max-w-4xl text-3xl font-black uppercase leading-[0.9] tracking-[-0.08em] text-neutral-950 sm:text-4xl lg:text-[clamp(2.5rem,3vw,3.5rem)]">
+							Building Software That Solves Real Business Problems
+						</h1>
+
+						<p className="mt-6 max-w-xl text-left text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg">
+							I develop enterprise applications, streamline workflows, and build practical digital solutions that create measurable value for teams and businesses.
+						</p>
 
 					{/* Updated CTA Buttons */}
 					<div className="mt-10 flex flex-wrap items-center gap-6">

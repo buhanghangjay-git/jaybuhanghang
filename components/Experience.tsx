@@ -3,41 +3,52 @@
 import { useState } from "react";
 
 const experiences = [
-	{
-		year: "Present",
-		label: "Current role",
-		title: "Software Engineer, Packaged Application Development",
-		company: "Accenture",
-		description: "Building experience in enterprise application development, software delivery, and practical technology solutions.",
-	},
-	{
-		year: "2026",
-		label: "Internship experience",
-		title: "Certificate Management",
-		company: "Grandline Maritime Inc.",
-		description: "Edited and updated seafarer certificates, validated records, and maintained accurate documentation while developing a sharp eye for detail and data quality.",
-	},
-	{
-		year: "2025",
-		label: "Professional experience",
-		title: "Online Sales Expert",
-		company: "247.ai",
-		description: "Supported customers through digital sales conversations while developing communication, product, and problem-solving skills.",
-	},
-	{
-		year: "2023",
-		label: "Professional experience",
-		title: "Customer Service Representative",
-		company: "Concentrix",
-		description: "Built a customer-first foundation through clear communication, careful issue resolution, and consistent service delivery.",
-	},
-	{
-		year: "2022",
-		label: "First job",
-		title: "Service Crew",
-		company: "McDonald's",
-		description: "Developed reliability, teamwork, customer service, and the ability to work calmly in a fast-paced environment.",
-	},
+    {
+        year: "Present",
+        label: "Current Role",
+        title: "Software Engineer",
+        company: "Accenture",
+        description:
+            "Building experience in enterprise software development by contributing to business applications, supporting solution delivery, and continuously expanding technical expertise within a professional development environment.",
+        focus: [
+            "Enterprise Applications",
+            "Software Delivery",
+            "Agile Development",
+            "System Enhancement",
+        ],
+    },
+    {
+        year: "2026",
+        label: "Internship Experience",
+        title: "Certificate Management Intern",
+        company: "Grandline Maritime Inc.",
+        description:
+            "Managed certificate records and documentation, maintained data accuracy, and supported administrative processes that required attention to detail, compliance, and information integrity.",
+    },
+    {
+        year: "2025",
+        label: "Professional Experience",
+        title: "Online Sales Expert",
+        company: "247.ai",
+        description:
+            "Delivered customer support through digital sales channels while strengthening communication, problem-solving, and customer engagement skills in a fast-paced environment.",
+    },
+    {
+        year: "2023",
+        label: "Professional Experience",
+        title: "Customer Service Representative",
+        company: "Concentrix",
+        description:
+            "Developed strong customer service and issue-resolution skills by providing timely support, clear communication, and consistent service experiences.",
+    },
+    {
+        year: "2022",
+        label: "First Job",
+        title: "Service Crew",
+        company: "McDonald's",
+        description:
+            "Built a foundation of teamwork, reliability, time management, and customer service while working in a high-volume environment.",
+    },
 ];
 
 export default function Experience() {
@@ -54,9 +65,30 @@ export default function Experience() {
 							<span className={`absolute left-0 top-10 h-3 w-3 rounded-full ${index === 0 ? "bg-[#464feb]" : "bg-neutral-400"} sm:left-[calc(30%-6px)]`} />
 							<div className="text-sm text-neutral-500"><p>{experience.year}</p><p className="mt-1 text-xs uppercase tracking-[0.08em]">{experience.label}</p></div>
 							<div>
-								<h2 className="text-2xl font-bold uppercase tracking-[-0.04em]">{experience.title}</h2>
+								<h2 className="text-xl font-black uppercase tracking-[-0.05em] sm:text-2xl">{experience.title}</h2>
 								<p className="mt-2 text-sm text-[#464feb]">{experience.company}</p>
-								<p className="mt-3 max-w-2xl text-left leading-7 text-neutral-500 sm:text-justify">{experience.description}</p>
+								<p className="mt-3 max-w-2xl leading-7 text-neutral-500">
+									{experience.description}
+								</p>
+
+								{"focus" in experience && experience.focus && (
+									<div className="mt-5">
+										<p className="mb-2 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-[#464feb]">
+											Focus
+										</p>
+
+										<div className="flex flex-wrap gap-2">
+											{experience.focus.map((item) => (
+												<span
+													key={item}
+													className="border border-neutral-200 px-3 py-1 text-xs text-neutral-600"
+												>
+													{item}
+												</span>
+											))}
+										</div>
+									</div>
+								)}
 							</div>
 						</article>
 					))}
