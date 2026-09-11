@@ -20,7 +20,7 @@ const experiences = [
     {
         year: "2026",
         label: "Internship Experience",
-        title: "Certificate Management Intern",
+        title: "Certificate Management",
         company: "Grandline Maritime Inc.",
         description:
             "Managed certificate records and documentation, maintained data accuracy, and supported administrative processes that required attention to detail, compliance, and information integrity.",
@@ -97,7 +97,7 @@ export default function Experience() {
 					{showAll ? "Show less ↑" : "View all history →"}
 				</button>
 				<div className="mt-10 grid gap-8 sm:grid-cols-2">
-					<div><p className="section-kicker">Education</p><p className="mt-4 text-lg">BS Information Technology</p><p className="mt-2 text-sm text-[#464feb]">National Teachers College</p></div>
+					<div><p className="section-kicker">Education</p><p className="mt-4 text-lg">BS in Information Technology</p><p className="mt-2 text-sm text-[#464feb]">National Teacher's College</p></div>
 				</div>
 			</div>
 		</section>
