@@ -56,7 +56,7 @@ export default function Experience() {
 	const visibleExperiences = showAll ? experiences : experiences.slice(0, 3);
 
 	return (
-		<section id="experience" className="py-16 sm:py-20 lg:ml-60">
+		<section id="experience" className="py-16 sm:py-20 xl:ml-60">
 			<div className="mx-auto max-w-6xl px-4 sm:px-6">
 				<p className="section-kicker">04 / Experience</p>
 				<div className="relative mt-8 py-2">

@@ -31,7 +31,7 @@ export default function Skills() {
 	return (
 		<section
 			id="skills"
-			className="py-16 sm:py-20 lg:ml-60"
+			className="py-16 sm:py-20 xl:ml-60"
 			aria-labelledby="skills-heading"
 		>
 			<div className="mx-auto max-w-6xl px-4 sm:px-6">
