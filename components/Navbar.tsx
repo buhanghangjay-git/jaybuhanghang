@@ -77,8 +77,7 @@ export default function Navbar() {
                         <span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
                     </button>
                 </div>
-
-                <div className="hidden flex-col gap-1 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3 lg:mt-20 lg:flex lg:flex-col lg:flex-nowrap lg:gap-5">
+                    <div className="hidden flex-col gap-1 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 2xl:flex 2xl:flex-col 2xl:flex-nowrap 2xl:gap-5 2xl:mt-20">
                     {links.map((link) => (
                         <a
                             className="transition-colors hover:text-[#464feb]"
