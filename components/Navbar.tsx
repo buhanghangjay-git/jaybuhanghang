@@ -59,7 +59,7 @@ export default function Navbar() {
                     href="#top"
                     className="text-lg font-black uppercase tracking-tight text-neutral-900 dark:text-white"
                 >
-                    Jay Buhanghang<span className="text-[#464feb]">.</span>
+                    Jay Buhanghang<span className="text-[#464feb]"></span>
                 </a>
 
                 <div className="mobile-actions xl:hidden">
