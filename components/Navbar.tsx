@@ -47,8 +47,8 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] 2xl:bottom-0 2xl:left-0 2xl:right-auto 2xl:top-0 2xl:w-60">
-                <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 2xl:block 2xl:max-w-6xl 2xl:px-8 2xl:py-9">
+        <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] xl:bottom-0 xl:left-0 xl:right-auto xl:top-0 xl:w-60">
+                <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 xl:block xl:max-w-6xl xl:px-8 xl:py-9">
                 <a href="#top" className="text-lg font-black uppercase tracking-tight text-neutral-900 dark:text-white">
                     Jay Buhanghang<span className="text-[#464feb]"></span>
                 </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
                         <span className={`menu-toggle-line ${isMenuOpen ? "menu-toggle-line-open" : ""}`} />
                     </button>
                 </div>
-                        <div className="hidden 2xl:flex 2xl:flex-col 2xl:gap-5 2xl:mt-20 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700">
+                        className="hidden xl:flex xl:flex-col xl:gap-5 xl:mt-20 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700"
                     {links.map((link) => (
                         <a
                             className="transition-colors hover:text-[#464feb]"
@@ -92,7 +92,7 @@ export default function Navbar() {
                     <button
                         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
                         aria-pressed={isDarkMode}
-                        className="desktop-theme-toggle mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 2xl:mt-8"
+                        className="desktop-theme-toggle mt-4 flex items-center gap-3 px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-neutral-700 xl:mt-8"
                         onClick={toggleTheme}
                         type="button"
                     >
@@ -100,7 +100,7 @@ export default function Navbar() {
                     </button>
 
                     <a
-                        className="mt-4 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb] 2xl:absolute 2xl:bottom-8 2xl:left-8 2xl:right-8 2xl:mt-0"
+                        className="mt-4 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb] xl:absolute xl:bottom-8 xl:left-8 xl:right-8 xl:mt-0"
 
                         href="mailto:buhanghangjay@gmail.com"
                     >
