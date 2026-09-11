@@ -34,7 +34,7 @@ const experiences = [
             "Delivered customer support through digital sales channels while strengthening communication, problem-solving, and customer engagement skills in a fast-paced environment.",
     },
     {
-        year: "2023",
+        year: "2023-2025",
         label: "Professional Experience",
         title: "Customer Service Representative",
         company: "Concentrix",
@@ -42,7 +42,7 @@ const experiences = [
             "Developed strong customer service and issue-resolution skills by providing timely support, clear communication, and consistent service experiences.",
     },
     {
-        year: "2022",
+        year: "2022-2023",
         label: "First Job",
         title: "Service Crew",
         company: "McDonald's",

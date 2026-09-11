@@ -32,13 +32,13 @@ export default function Hero() {
 							download="Jay-Buhanghang-CV.pdf" 
 							className="text-sm font-medium text-neutral-500 underline decoration-neutral-300 underline-offset-8 transition-colors hover:text-[#464feb]"
 						>
-							Download Resume
+							Download CV
 						</a>
 						<a 
 							href="#contact" 
 							className="text-sm font-medium text-neutral-500 underline decoration-neutral-300 underline-offset-8 transition-colors hover:text-[#464feb]"
 						>
-							Let&apos;s connect
+							
 						</a>
 					</div>
 
