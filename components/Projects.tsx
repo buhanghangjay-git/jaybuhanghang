@@ -36,7 +36,7 @@ export default function Projects() {
 				<div className="mt-12 grid gap-8 pt-8 lg:grid-cols-[0.8fr_1.2fr]">
 					<div>
 						<p className="section-kicker">Case study</p>
-						<h3 className="mt-4 text-2xl font-black uppercase tracking-[-0.05em]">Digitizing Service Operations Through a Centralized Platform</h3>
+						<h3 className="mt-4 text-xl font-black uppercase tracking-[-0.05em]">Digitizing Service Operations Through a Centralized Platform</h3>
 						<p className="mt-5 text-left leading-7 text-neutral-500 sm:text-justify">As Project Leader, I collaborated with the team to analyze existing service workflows, define system requirements, design the database structure, and support application development activities throughout the project lifecycle.
 
 The platform was created to address fragmented communication and manual request handling by introducing a centralized workflow for customers, technicians, and administrators.</p>
@@ -55,9 +55,9 @@ The platform was created to address fragmented communication and manual request 
 										<div className="flip-card-front absolute inset-0 bg-neutral-900">
 											<Image src={screenshot.src} alt={screenshot.label} fill sizes="(min-width: 1024px) 35vw, 90vw" className="object-cover object-top" />
 										</div>
-										<div className="flip-card-back absolute inset-0 flex flex-col justify-between bg-[#464feb] p-5 text-white">
+										<div className="flip-card-back absolute inset-0 flex flex-col justify-between bg-[#464feb] p-4 text-white">
 											<span className="font-mono text-xs font-bold uppercase tracking-[0.12em]">0{index + 1} / SmartLink</span>
-											<p className="text-lg font-bold leading-6">{screenshot.detail}</p>
+											<p className="text-base font-bold leading-6 lg:text-base">{screenshot.detail}</p>
 											<span className="font-mono text-[0.65rem] uppercase tracking-[0.12em]">Hover or focus to return</span>
 										</div>
 									</div>
