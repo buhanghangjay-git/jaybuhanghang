@@ -8,16 +8,19 @@ import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-	return (
-		<main className="site-shell">
-			<Navbar />
-			<Hero />
-			<About />
-			<Skills />
-			<Projects />
-			<Experience />
-			<Certifications />
-			<Footer />
-		</main>
-	);
+    return (
+        <main className="site-shell">
+            <Navbar />
+
+            <div className="lg:ml-52">
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <Experience />
+                <Certifications />
+                <Footer />
+            </div>
+        </main>
+    );
 }

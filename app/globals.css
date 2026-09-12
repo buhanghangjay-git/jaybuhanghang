@@ -205,7 +205,7 @@ body.mobile-menu-open {
     outline-offset: 4px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .mobile-actions {
         display: none !important;
     }
@@ -329,7 +329,7 @@ html.dark .mobile-menu {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .mobile-menu {
         display: none;
     }

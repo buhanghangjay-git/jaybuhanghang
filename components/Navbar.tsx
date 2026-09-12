@@ -53,7 +53,7 @@ export default function Navbar() {
     }
 
     return (
-            <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
+            <nav className="fixed inset-x-0 top-0 z-50 w-full bg-transparent lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
                 <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
                 <a
                     href="#top"
@@ -117,7 +117,7 @@ export default function Navbar() {
                     </button>
 
                     <a
-                        className="absolute bottom-8 left-8 right-8 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
+                        className="mt-auto pt-12 left-8 right-8 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
                         href="mailto:buhanghangjay@gmail.com"
                     >
                         <span className="block max-w-[12rem] text-sm leading-6">
