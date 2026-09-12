@@ -57,7 +57,7 @@ export default function Navbar() {
                 <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-5xl lg:px-8 lg:py-9">
                 <a
                     href="#top"
-                    className="text-lg font-black uppercase tracking-tight text-neutral-900 dark:text-white"
+                    className="text-lg font-extrabold uppercase tracking-[-0.02em] text-neutral-900 dark:text-white"
                 >
                     Jay Buhanghang<span className="text-[#464feb]"></span>
                 </a>
@@ -94,8 +94,9 @@ export default function Navbar() {
                         />
                     </button>
                 </div>
-                        <div className="hidden h-[calc(100vh-140px)] text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 lg:mt-20 lg:flex lg:flex-col">
-                        {links.map((link) => (
+                <div className="hidden h-[calc(100vh-140px)] text-xs font-bold uppercase tracking-[0.14em] text-neutral-700 lg:mt-20 lg:flex lg:flex-col lg:gap-3">                        
+                    
+                    {links.map((link) => (
                         <a
                             key={link}
                             href={`#${link.toLowerCase()}`}
@@ -165,3 +166,7 @@ export default function Navbar() {
         </nav>
     );
 }
+
+
+
+
