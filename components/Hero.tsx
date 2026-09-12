@@ -2,9 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
 	return (
-		<section id="top" className="relative overflow-hidden xl:ml-60">
-			<div className="mx-auto grid min-h-[680px] max-w-6xl items-end gap-12 px-4 pb-14 pt-28 sm:min-h-[760px] sm:gap-16 sm:px-6 sm:pb-20 sm:pt-36 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-16 lg:pb-24">
-				
+			<section id="top" className="relative overflow-hidden">
+				<div className="mx-auto grid min-h-[680px] max-w-5xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr]">
 				{/* Left Column */}
 
 				<div className="order-2 lg:order-1">

@@ -10,17 +10,17 @@ import Footer from "@/components/Footer";
 export default function Home() {
     return (
         <main className="site-shell">
-            <Navbar />
+			<Navbar />
 
-            <div className="lg:ml-52">
-                <Hero />
-                <About />
-                <Skills />
-                <Projects />
-                <Experience />
-                <Certifications />
-                <Footer />
-            </div>
-        </main>
+			<div className="lg:ml-60">
+				<Hero />
+				<About />
+				<Skills />
+				<Projects />
+				<Experience />
+				<Certifications />
+				<Footer />
+			</div>
+		</main>
     );
 }

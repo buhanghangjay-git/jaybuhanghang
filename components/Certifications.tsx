@@ -29,9 +29,9 @@ export default function Certifications() {
 	return (
 		<section
 			id="certifications"
-			className="py-16 sm:py-20 xl:ml-60"
+			className="py-16 sm:py-20"
 		>
-			<div className="mx-auto max-w-6xl px-4 sm:px-6">
+			<div className="mx-auto max-w-5xl px-4 sm:px-6">
 
 				<p className="section-kicker">
 					05 / Certifications & Learning
