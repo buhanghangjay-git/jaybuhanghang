@@ -53,8 +53,8 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] xl:bottom-0 xl:left-0 xl:right-auto xl:top-0 xl:w-60">
-            <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 xl:block xl:max-w-6xl xl:px-8 xl:py-9">
+            <nav className="fixed inset-x-0 top-0 z-50 w-full bg-[#fbfbfa] lg:bottom-0 lg:left-0 lg:right-auto lg:top-0 lg:w-60">
+                <div className="mx-auto flex w-full max-w-none items-center justify-between gap-5 px-5 py-5 sm:gap-6 sm:px-6 sm:py-5 lg:block lg:max-w-6xl lg:px-8 lg:py-9">
                 <a
                     href="#top"
                     className="text-lg font-black uppercase tracking-tight text-neutral-900 dark:text-white"
@@ -62,7 +62,7 @@ export default function Navbar() {
                     Jay Buhanghang<span className="text-[#464feb]"></span>
                 </a>
 
-                <div className="mobile-actions xl:hidden">
+                <div className="mobile-actions lg:hidden">
                     <button
                         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
                         aria-pressed={isDarkMode}
@@ -95,8 +95,8 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <div className="hidden text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 xl:mt-20 xl:flex xl:flex-col xl:gap-5">
-                    {links.map((link) => (
+                    <div className="hidden text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 lg:mt-20 lg:flex lg:flex-col lg:gap-5">
+                        {links.map((link) => (
                         <a
                             key={link}
                             href={`#${link.toLowerCase()}`}
@@ -137,7 +137,7 @@ export default function Navbar() {
                 <div
                     aria-label="Mobile navigation"
                     aria-modal="true"
-                    className="mobile-menu xl:hidden"
+                    className="mobile-menu lg:hidden"
                     id="mobile-navigation"
                     role="dialog"
                 >
