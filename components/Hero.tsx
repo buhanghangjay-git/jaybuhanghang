@@ -7,8 +7,8 @@ export default function Hero() {
 				{/* Left Column */}
 
 				<div className="order-2 lg:order-1">
-					<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#464feb]">
-							Software Engineer • Application Dev
+					<span className="font-mono text-[10px] lg:text-xs font-bold uppercase tracking-[0.2em] text-[#464feb]">							
+						Software Engineer • App Development
 						</span>
 
 						<h1 className="mt-4 max-w-4xl text-3xl font-black uppercase leading-[0.9] tracking-[-0.08em] text-neutral-950 sm:text-4xl lg:text-[clamp(2.5rem,3vw,3.5rem)]">
