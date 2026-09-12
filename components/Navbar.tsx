@@ -94,8 +94,7 @@ export default function Navbar() {
                         />
                     </button>
                 </div>
-
-                    <div className="hidden text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 lg:mt-20 lg:flex lg:flex-col lg:gap-5">
+                        <div className="hidden h-[calc(100vh-140px)] text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 lg:mt-20 lg:flex lg:flex-col">
                         {links.map((link) => (
                         <a
                             key={link}
@@ -117,7 +116,7 @@ export default function Navbar() {
                     </button>
 
                     <a
-                        className="mt-auto pt-12 left-8 right-8 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
+                        className="mt-auto pt-10 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
                         href="mailto:buhanghangjay@gmail.com"
                     >
                         <span className="block max-w-[12rem] text-sm leading-6">
