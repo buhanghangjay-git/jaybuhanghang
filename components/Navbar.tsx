@@ -116,7 +116,7 @@ export default function Navbar() {
                     </button>
 
                     <a
-                        className="mt-auto pt-10 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
+                        className="mt-auto pb-10 pt-10 max-w-full text-xs normal-case tracking-normal text-neutral-500 hover:text-[#464feb]"
                         href="mailto:buhanghangjay@gmail.com"
                     >
                         <span className="block max-w-[12rem] text-sm leading-6">
