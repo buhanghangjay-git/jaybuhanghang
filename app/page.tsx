@@ -10,16 +10,18 @@ import Footer from "@/components/Footer";
 export default function Home() {
     return (
         <main className="site-shell">
-			<Navbar />
+   		 <Navbar />
 
 			<div className="lg:ml-60">
-				<Hero />
-				<About />
-				<Skills />
-				<Projects />
-				<Experience />
-				<Certifications />
-				<Footer />
+				<div className="mx-auto max-w-4xl px-6 lg:px-8">
+					<Hero />
+					<About />
+					<Skills />
+					<Projects />
+					<Experience />
+					<Certifications />
+					<Footer />
+				</div>
 			</div>
 		</main>
     );
